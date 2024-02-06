@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+ <label for="name" class="w-75 mx-auto d-block pt-2">Name</label>
+ <input  type="text" oninput="valid_name()" id="name" class="form-control w-75 mx-auto d-block pt-2">
+    
+ <label for="price" class="w-75 mx-auto d-block pt-2">price</label>
+ <input type="text" oninput="valid_num()" id="price" class="form-control w-75 mx-auto d-block pt-2">
+
+ <label for="model" class="w-75 mx-auto d-block pt-2">model</label>
+ <input type="text" oninput="valid_model()" id="model" class="form-control w-75 mx-auto d-block pt-2">
+
+ <label for="description" class="w-75 mx-auto d-block pt-2">description</label>
+ <textarea type="text" id="description" class="form-control w-75 mx-auto d-block pt-2"></textarea>
+
+ <button onclick="add();" type="button"  class="btn btn-outline-primary mx-auto d-block mt-5" id="add_btn"> ADD</button>
+ <button onclick="update();"  class="btn btn-outline-danger mx-auto d-block mt-5 d-none" id="update_btn">update</button>
+<label for="search" class="w-75 mx-auto d-block pt-2">search</label>
+<input oninput="search_pro(this.value)" type="search" id="search" class="w-75 mx-auto d-block pt-2" placeholder="search by name">
+ <table class="table w-75 mx-auto my-4">
+    <thead>
+        <th>name</th>
+        <th>price</th>
+        <th>model</th>
+        <th>description</th>
+        <th>delete</th>
+        <th>update</th>
+    </thead>
+    <tbody id="tableBody">
+
+    </tbody>
+ </table>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+ <script src="js/js.js"></script>
+</body>
+</html>
